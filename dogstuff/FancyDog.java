@@ -20,12 +20,19 @@ public class FancyDog extends Dog {
 	 */
 
 	FancyDog () {
-		super(); // Call the Dog() constructor.
+		// We know nothing about this dog.
+		// Example object creation: Dog myDog3 = new FancyDog();
+		
+		super(); // Call the parent Dog() constructor.
 		m_outfit = OUTFIT.NONE;
 	}
 	
 	FancyDog (BREED breed, FURCOLOR color, FURLENGTH length, OUTFIT outfit){
-		super(breed,color,length); // Call the Dog(breed,color,length) constructor.
+		// We know everything about this dog.
+		// Example object creation: Dog myDog4 = new FancyDog(Dog.BREED.TERRIER, Dog.FURCOLOR.WHITE, Dog.FURLENGTH.SHORT, 
+        //													  FancyDog.OUTFIT.NONE);
+		
+		super(breed,color,length); // Call the parent Dog(breed,color,length) constructor.
 		m_outfit = outfit;
 	}
 	

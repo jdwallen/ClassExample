@@ -10,7 +10,6 @@ public class Dog {
 	public enum FURCOLOR  {BLACK, WHITE, MIXED, UNKNOWN};
 	public enum FURLENGTH {SHORT, MEDIUM, LONG, UNKNOWN};
 
-	
 	/*
 	 *  Declare non-static variables to hold the attributes.  Each of these variables exists
 	 *  for each Dog object that is created.
@@ -38,42 +37,34 @@ public class Dog {
 	
 	Dog () {
 		// We know nothing about this dog.
+		// Example object creation: Dog myDog1 = new Dog();
 		m_breed         = BREED.UNKNOWN;
 		m_furColor      = FURCOLOR.UNKNOWN;
 		m_furLength     = FURLENGTH.UNKNOWN;
-	    m_licenseNumber = GenerateLicenseNumber();	
+		m_licenseNumber = GenerateLicenseNumber();	
 	}
 	
 	Dog (BREED breed, FURCOLOR color, FURLENGTH length) {
 		// We know everything about this dog.
+		// Example object creation: Dog myDog2 = new Dog(Dog.BREED.POODLE, Dog.FURCOLOR.BLACK, Dog.FURLENGTH.MEDIUM);
 		m_breed         = breed;
 		m_furColor      = color;
 		m_furLength     = length;
-	    m_licenseNumber = GenerateLicenseNumber();		
+		m_licenseNumber = GenerateLicenseNumber();		
 	}
 	
 	/*
 	 * Dog methods
 	 */
 		
-	public String getBreed() {
-		return m_breed.name();
-	}
+	public String getBreed     () { return m_breed.name(); }
 	
-	public String getFurColor () {
-		return m_furColor.name();
-	}
+	public String getFurColor  () { return m_furColor.name(); }
 	
-	public String getFurLength () {
-		return m_furLength.name();
-	}
+	public String getFurLength () {	return m_furLength.name(); }
 	
-	public int getLicNum () {
-		return m_licenseNumber;
-	}
+	public int    getLicNum    () { return m_licenseNumber; }
 	
-	public void bark () {
-		System.out.println("Bark, bark, bark!");
-	}
+	public void   bark         () {	System.out.println("Bark, bark, bark!"); }
 	
 }
