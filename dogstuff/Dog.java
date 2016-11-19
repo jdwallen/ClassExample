@@ -23,13 +23,8 @@ public class Dog {
 	/*  Define a static variable used to generate a unique pet license number (starting at 1000).
 	 *  Only one instance of this variable exists no matter how many Dog objects are created.
 	 */ 
-	private static int nextLicenseNum = 1000;
-	
-	private int GenerateLicenseNumber () {
-		int val = nextLicenseNum;
-		nextLicenseNum++;
-		return val;
-	}
+	private static int nextLicenseNum = 999;
+
 	
 	/*
 	 * Dog constructors
@@ -51,6 +46,11 @@ public class Dog {
 		m_furColor      = color;
 		m_furLength     = length;
 		m_licenseNumber = GenerateLicenseNumber();		
+	}
+	
+	private int GenerateLicenseNumber () {
+		nextLicenseNum++;		// Increment the unique license number and return it to the caller.
+		return nextLicenseNum;
 	}
 	
 	/*
